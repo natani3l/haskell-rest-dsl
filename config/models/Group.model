@@ -1,0 +1,3 @@
+    Group sql
+        name Text
+      deriving Show Read Generic ToJSON FromJSON

@@ -1,0 +1,126 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           crud-generator
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/crud-generator#readme>
+homepage:       https://github.com/github.com/natani3l#readme
+bug-reports:    https://github.com/github.com/natani3l/issues
+author:         Nataniel Siebeneichler
+maintainer:     nataniel.lemes@estudante.uffs.edu.br
+copyright:      2023 Nataniel Siebeneichler
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/github.com/natani3l
+
+library
+  exposed-modules:
+      Common.Database
+      Generator.Model
+      Generator.RouterTH
+      Generator.ServerTH
+      Lib
+      Model.Migration
+      Model.ModelGen
+      Server.Routes
+      Server.ServerGen
+  other-modules:
+      Paths_crud_generator
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , directory
+    , filepath
+    , monad-logger
+    , mtl
+    , network
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , servant-server
+    , template-haskell
+    , text
+    , time
+    , transformers
+    , wai
+    , warp
+  default-language: Haskell2010
+
+executable api
+  main-is: Main.hs
+  other-modules:
+      Paths_crud_generator
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base
+    , bytestring
+    , containers
+    , crud-generator
+    , directory
+    , filepath
+    , monad-logger
+    , mtl
+    , network
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , servant-server
+    , template-haskell
+    , text
+    , time
+    , transformers
+    , wai
+    , warp
+  default-language: Haskell2010
+
+test-suite main-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_crud_generator
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base
+    , bytestring
+    , containers
+    , crud-generator
+    , directory
+    , filepath
+    , hspec
+    , hspec-wai
+    , hspec-wai-json
+    , monad-logger
+    , mtl
+    , network
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , servant-server
+    , template-haskell
+    , text
+    , time
+    , transformers
+    , wai
+    , warp
+  default-language: Haskell2010

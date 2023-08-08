@@ -1,0 +1,4 @@
+    User sql
+        name Text
+        surname Text
+      deriving Show Read Generic ToJSON FromJSON

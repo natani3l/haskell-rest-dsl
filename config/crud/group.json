@@ -1,0 +1,11 @@
+{
+  "name": "group",
+  "prefix": "api",
+  "entity": "Group",
+  "fields": [
+    {
+      "fieldName": "groupName",
+      "fieldType": "text"
+    }
+  ]
+}

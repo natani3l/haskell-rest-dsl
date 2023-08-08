@@ -1,0 +1,15 @@
+{
+  "name": "user",
+  "prefix": "api",
+  "entity": "User",
+  "fields": [
+    {
+      "fieldName": "userName",
+      "fieldType": "text"
+    },
+    {
+      "fieldName": "userSurname",
+      "fieldType": "text"
+    }
+  ]
+}
